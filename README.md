@@ -29,9 +29,9 @@ Make consistent the upper layer software across different SoC. This requires sta
 <br>
 Table showing how existing solutions map against requirements at Project Concept gate
 
-|  Items | 	[CMSIS](https://developer.arm.com/tools-and-software/embedded/cmsis) |	CSI | [CommonIO](https://commons.apache.org/proper/commons-io/) |  [NMSIS](https://doc.nucleisys.com/nmsis/) | [Sifive Freedon Metal](https://github.com/sifive/freedom-metal) | 
+|  Items | 	[CMSIS](https://developer.arm.com/tools-and-software/embedded/cmsis) |	CSI | [CommonIO](https://commons.apache.org/proper/commons-io/) <br> It is something different|  [NMSIS](https://doc.nucleisys.com/nmsis/) | [Sifive Freedon Metal](https://github.com/sifive/freedom-metal) | 
 | --- | --- | --- | --- | --- | --- |
-| Web Link |  https://developer.arm.com/tools-and-software/embedded/cmsis   |     |  https://commons.apache.org/proper/commons-io/   |  https://github.com/Nuclei-Software/NMSIS ; https://doc.nucleisys.com/nmsis/   | https://github.com/sifive/freedom-metal ; https://sifive.github.io/freedom-e-sdk-docs/index.html |
+| Web Link |  https://developer.arm.com/tools-and-software/embedded/cmsis ; https://github.com/ARM-software/CMSIS_5 ; https://www.keil.com/pack/doc/CMSIS/General/html/index.html  |     |  https://commons.apache.org/proper/commons-io/ ; https://www.tutorialspoint.com/commons_io/commons_io_overview.htm  |  https://github.com/Nuclei-Software/NMSIS ; https://doc.nucleisys.com/nmsis/   | https://github.com/sifive/freedom-metal ; https://sifive.github.io/freedom-e-sdk-docs/index.html |
 | Core | Support |	Support	| Support	| Support |
 | Driver | Device x13 |	Device  x 23 | 	-  |  -   |     |
 | RTOS| FreeRTOS |	FreeRTOS, Rhino	| -    |   -  |     |	
@@ -42,24 +42,24 @@ Table showing how existing solutions map against requirements at Project Concept
 | License |	Apache 2.0 |	Apache 2.0 |	- | Apache 2.0   |    |	
 | Software pack |	Support	| Support |	-	|   Support |    |
 | Numbered Requirements	(Y/N/Maybe)|     |    |    |    |    |			
-| T1 |    |    |    |    |    |				
-| T2 |    |    |    |    |    |			
-| T3 |    |    |    |    |    |			
-| T4 |    |    |    |    |    |				
-| T5 |    |    |    |    |    |				
-| T6 |    |    |    |    |    |			
-| T7 |    |    |    |    |    |				
-| T8 |    |    |    |    |    |				
-| T9 |    |    |    |    |    |				
-| IA1 |   |    |    |    |    |				
-| S1 |    |    |    |    |    |				
-| S2 |    |    |    |    |    |			
-| S3 |    |    |    |    |    |			
-| S4 |    |    |    |    |    |				
-| IM1 |   |    |    |    |    |				
-| IM2 |   |    |    |    |    |				
-| IM3 |   |    |    |    |    |				
-| IM4 |   |    |    |    |    |			
+| T-1 |  Y, for ARM  | Y   |    |    |    |				
+| T-2 |  Y  |  Y  |    |    |    |			
+| T-3 |  Maybe  |  Y  |    |    |    |			
+| T-4 |  N  |  Y  |    |    |    |				
+| T-5 |  N  |  Y  |    |    |    |				
+| T-6 ? |  Y  |  Y  |    |    |    |			
+| T-7 |  N  |  Maybe  |    |    |    |				
+| T-8 | N   | Maybe   |    |    |    |				
+| T-9 |  N  |  Maybe?  |    |    |    |				
+| IA-1 | N  |  Y  |    |    |    |				
+| S-1 |  Y  |  Y  |    |    |    |				
+| S-2 |  Y  |  Y  |    |    |    |			
+| S-3 |  Y  |  Y  |    |    |    |			
+| S-4 |  N  |  Y?  |    |    |    |				
+| IM-1 | N  |  Y  |    |    |    |				
+| IM-2 | N  |  Y  |    |    |    |				
+| IM-3 | N  |  Y?  |    |    |    |				
+| IM-4 | N  |  Y?  |    |    |    |			
 
 
 
