@@ -1,6 +1,5 @@
-# OpenHW-HAL
-markdown docs <br>
-Known market/project requirements at PC gate <br>
+
+# Known market/project requirements at PC gate
 Significantly reduce cost in SoC driver development, by defining an approach to enable driver reuse according to an accepted framework;<br>
 Make consistent the upper layer software across different SoC. This requires standard HAL APIs to isolate hardware and software resources in such a manner that makes it easy to migrate software across platforms.
 
@@ -28,11 +27,11 @@ Make consistent the upper layer software across different SoC. This requires sta
 <br>
 <br>
 <br>
-Table showing how existing solutions map against requirements at Project Concept gate <br>
+Table showing how existing solutions map against requirements at Project Concept gate
 
-|  Items | 	CMSIS |	CSI | CommonIO |  NMSIS | Sifive Freedon Metal Lib | 
+|  Items | 	[CMSIS](https://developer.arm.com/tools-and-software/embedded/cmsis) |	CSI | [CommonIO](https://commons.apache.org/proper/commons-io/) |  [NMSIS](https://doc.nucleisys.com/nmsis/) | [Sifive Freedon Metal](https://github.com/sifive/freedom-metal) | 
 | --- | --- | --- | --- | --- | --- |
-| Web Link |     |     |     |      | https://sifive.github.io/freedom-e-sdk-docs/index.html |
+| Web Link |  https://developer.arm.com/tools-and-software/embedded/cmsis   |     |  https://commons.apache.org/proper/commons-io/   |  https://github.com/Nuclei-Software/NMSIS ; https://doc.nucleisys.com/nmsis/   | https://github.com/sifive/freedom-metal ; https://sifive.github.io/freedom-e-sdk-docs/index.html |
 | Core | Support |	Support	| Support	| Support |
 | Driver | Device x13 |	Device  x 23 | 	-  |  -   |     |
 | RTOS| FreeRTOS |	FreeRTOS, Rhino	| -    |   -  |     |	
