@@ -29,38 +29,46 @@ Make consistent the upper layer software across different SoC. This requires sta
 <br>
 Table showing how existing solutions map against requirements at Project Concept gate
 
-|  Items | 	[CMSIS](https://developer.arm.com/tools-and-software/embedded/cmsis) |	CSI | [CommonIO](https://commons.apache.org/proper/commons-io/) <br> It is something different|  [NMSIS](https://doc.nucleisys.com/nmsis/) | [Sifive Freedon Metal](https://github.com/sifive/freedom-metal) | 
-| --- | --- | --- | --- | --- | --- |
-| Web Link |  https://developer.arm.com/tools-and-software/embedded/cmsis ; https://github.com/ARM-software/CMSIS_5 ; https://www.keil.com/pack/doc/CMSIS/General/html/index.html  |     |  https://commons.apache.org/proper/commons-io/ ; https://www.tutorialspoint.com/commons_io/commons_io_overview.htm  |  https://github.com/Nuclei-Software/NMSIS ; https://doc.nucleisys.com/nmsis/   | https://github.com/sifive/freedom-metal ; https://sifive.github.io/freedom-e-sdk-docs/index.html |
-| Core | Support |	Support	| Support	| Support |
-| Driver | Device x13 |	Device  x 23 | 	-  |  -   |     |
-| RTOS| FreeRTOS |	FreeRTOS, Rhino	| -    |   -  |     |	
-| NN	| Support	| Support |	-  | Support   |    |	
-| DSP	| Support	| Support	| -	|  Support  |    |   
-| Coding Rule | MISRA | MISRA, TUeV61508 |	 |  MISRA  |    |	
-| Validation | Support |	Support |	 - |  Support  |    |	
-| License |	Apache 2.0 |	Apache 2.0 |	- | Apache 2.0   |    |	
-| Software pack |	Support	| Support |	-	|   Support |    |
-| Numbered Requirements	(Y/N/Maybe)|     |    |    |    |    |			
-| T-1 |  Y, for ARM  | Y   |    |    |    |				
-| T-2 |  Y  |  Y  |    |    |    |			
-| T-3 |  Maybe  |  Y  |    |    |    |			
-| T-4 |  N  |  Y  |    |    |    |				
-| T-5 |  N  |  Y  |    |    |    |				
-| T-6 ? |  Y  |  Y  |    |    |    |			
-| T-7 |  N  |  Maybe  |    |    |    |				
-| T-8 | N   | Maybe   |    |    |    |				
-| T-9 |  N  |  Maybe?  |    |    |    |				
-| IA-1 | N  |  Y  |    |    |    |				
-| S-1 |  Y  |  Y  |    |    |    |				
-| S-2 |  Y  |  Y  |    |    |    |			
-| S-3 |  Y  |  Y  |    |    |    |			
-| S-4 |  N  |  Y?  |    |    |    |				
-| IM-1 | N  |  Y  |    |    |    |				
-| IM-2 | N  |  Y  |    |    |    |				
-| IM-3 | N  |  Y?  |    |    |    |				
-| IM-4 | N  |  Y?  |    |    |    |			
+|  Items | 	CMSIS |	CSI |  NMSIS | Sifive Freedom Metal <br> (a library) <br> Freedom E SDK | STM32F4 HAL <br> STM32Cube <br> (a SDK?)  | CommonIO <br> (It is something different)  |
+| --- | --- | --- | --- | --- | --- | --- |
+| Core | Support (ARM) |	Support	| Support	|  Support  |  Support (ARM)  |     |
+| Driver | Device x13 |	Device  x 23 | 	- |  Support  |  Support   |    |
+| RTOS| FreeRTOS |	FreeRTOS, Rhino	| -   |   FreeRTOS  | FreeRTOS     |	    |
+| NN	| Support	| Support |	Support  |  N  | Support   |	    |
+| DSP	| Support	| Support	| Support	|   N  |  Support  |      |
+| Coding Rule | MISRA | MISRA, TUeV61508 |	MISRA |  -  | -   |	    |
+| Validation | Support |	Support |	 Support |  -  |  -  |	    |
+| License |	Apache 2.0 |	Apache 2.0 |	Apache 2.0 |  Apache 2.0 and MIT  | Apache License 2.0, MIT <br> BSD-3-Clause, ST SLA0044 <br> Independent JPEG Group License  |	    |
+| Software pack |	Support	| Support |	Support	|  Support  | Support   |    |
+| Numbered Requirements	<br> (Y/N/Maybe/-)|     |    |    |    |    |		   |	
+| T-1 |  Y, for ARM  | Y   |  Y   |   Y |  Y, for ARM  |		   |		
+| T-2 |  Y  |  Y  |  Y  |  Y  |  Y   |	 |		
+| T-3 |  Maybe  |  Y  |  N  |  Y  | Y  |	    |		
+| T-4 | -  |  Y  | -  |  - |  -  |		   |		
+| T-5 |  N  |  Y  |  N  |  N  |  N  |			|	
+| T-6 ? |  Y  |  Y  | Y   |  Y  | Y   |	   |		
+| T-7 |  N  |  Maybe  |  N |  Y?  | N   |				|
+| T-8 | N   | Maybe   |  N |  N  |   N |			|	
+| T-9 |  N  |  Maybe?  |  N  |  N  |  N  |				|
+| IA-1 | N  |  Y  |  Maybe  |  Maybe  | N   |			|	
+| S-1 |  -  |  Y  |  Y  |  N  |  -  |	   |			
+| S-2? |  Maybe  |  Maybe  |  Maybe  |  Maybe  |  Maybe  |	    |		
+| S-3 |  -  |  Y  |  -  |  -  |   - |		   |	
+| S-4 |  N  |  Y?  |  N  | -  |  N  |      |			
+| IM-1 | N  |  Y  |  N  |  N  |  N  |		   |		
+| IM-2 | N  |  Y  |  N  |  N  |   N |	    |			
+| IM-3 | N  |  Y?  |  N  |  N  |  N  |	     |			
+| IM-4 | N  |  Y?  |  N  |  N  |   N |		    |	
+<br>
 
+Resouces <br>
+CMSIS: <br> https://developer.arm.com/tools-and-software/embedded/cmsis <br> https://github.com/ARM-software/CMSIS_5 <br> https://www.keil.com/pack/doc/CMSIS/General/html/index.html <br>
+CSI: <br>
+NMSIS: <br> https://github.com/Nuclei-Software/NMSIS <br> https://doc.nucleisys.com/nmsis/ <br> 
+Sifive: <br>  https://github.com/sifive/freedom-metal <br> https://sifive.github.io/freedom-metal-docs/ <br> https://sifive.github.io/freedom-e-sdk-docs/index.html <br> https://github.com/sifive/freedom-e-sdk <br>
+STM32Cube: <br> https://github.com/STMicroelectronics/stm32f4xx_hal_driver <br> https://github.com/STMicroelectronics/STM32CubeF4 <br> https://www.st.com/en/ecosystems/stm32cube.html <br> 
+Apache CommonIO: <br> https://commons.apache.org/proper/commons-io/ <br> https://www.tutorialspoint.com/commons_io/commons_io_overview.htm <br>
+  
 
 
 
