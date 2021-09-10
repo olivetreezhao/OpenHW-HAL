@@ -61,7 +61,7 @@ Table showing how existing solutions map against requirements at Project Concept
 | IM-4 | N  |  Y?  |  N  |  N  |   N |		    |	
 <br>
 
-Resouces <br>
+**Resources** <br>
 CMSIS: <br> https://developer.arm.com/tools-and-software/embedded/cmsis <br> https://github.com/ARM-software/CMSIS_5 <br> https://www.keil.com/pack/doc/CMSIS/General/html/index.html <br>
 CSI: <br>
 NMSIS: <br> https://github.com/Nuclei-Software/NMSIS <br> https://doc.nucleisys.com/nmsis/ <br> 
