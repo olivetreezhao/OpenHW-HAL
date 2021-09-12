@@ -46,8 +46,8 @@ Table showing how existing solutions map against requirements at Project Concept
 | T-3 |  Maybe  |  Y  |  N  |  Y  | Y  |	    |		
 | T-4 | -  |  Y  | -  |  - |  -  |		   |		
 | T-5 |  N  |  Y  |  N  |  N  |  N  |			|	
-| T-6 ? |  Y  |  Y  | Y   |  Y  | Y   |	   |		
-| T-7 |  N  |  Maybe  |  N |  Y?  | N   |				|
+| T-6  | Y  |  N  | N   |  -  | -   |	   |		
+| T-7 |  Y  |  N  | N | -  | -  |			|
 | T-8 | N   | Maybe   |  N |  N  |   N |			|	
 | T-9 |  N  |  Maybe?  |  N  |  N  |  N  |				|
 | IA-1 | N  |  Y  |  Maybe  |  Maybe  | N   |			|	
@@ -63,7 +63,7 @@ Table showing how existing solutions map against requirements at Project Concept
 
 **Resources** <br>
 CMSIS: <br> https://developer.arm.com/tools-and-software/embedded/cmsis <br> https://github.com/ARM-software/CMSIS_5 <br> https://www.keil.com/pack/doc/CMSIS/General/html/index.html <br>
-CSI: <br>
+CSI: <br>https://occ.t-head.cn/document?temp=t-head-chip-standard-interface-csi&slug=csi
 NMSIS: <br> https://github.com/Nuclei-Software/NMSIS <br> https://doc.nucleisys.com/nmsis/ <br> 
 Sifive: <br>  https://github.com/sifive/freedom-metal <br> https://sifive.github.io/freedom-metal-docs/ <br> https://sifive.github.io/freedom-e-sdk-docs/index.html <br> https://github.com/sifive/freedom-e-sdk <br>
 STM32Cube: <br> https://github.com/STMicroelectronics/stm32f4xx_hal_driver <br> https://github.com/STMicroelectronics/STM32CubeF4 <br> https://www.st.com/en/ecosystems/stm32cube.html <br> 
