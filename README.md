@@ -1,4 +1,5 @@
 
+
 # Known market/project requirements at PC gate
 Significantly reduce cost in SoC driver development, by defining an approach to enable driver reuse according to an accepted framework;<br>
 Make consistent the upper layer software across different SoC. This requires standard HAL APIs to isolate hardware and software resources in such a manner that makes it easy to migrate software across platforms.
@@ -22,11 +23,9 @@ Make consistent the upper layer software across different SoC. This requires sta
 | Implementation Rqmtns |	IM-1 | A complete open source reference implementation of the HAL for CORE-V MUST be a project deliverable |
 |    | IM-2 |	FreeRTOS SHOULD be supported in the open source reference implementation of HAL for CORE-V |
 |    | IM-3	|Newlib SHOULD be supported in the open source reference implementation of HAL for CORE-V |
-|    | IM-3	| The HAL reference implementation for CORE-V SHOULD be published by the body publishing the Specification (previous page)| 
+|    | IM-3	| The HAL reference implementation for CORE-V SHOULD be published by the body publishing the Specification (previous page)|  
+---
 
-<br>
-<br>
-<br>
 Table showing how existing solutions map against requirements at Project Concept gate
 
 |  Items | 	CMSIS |	CSI |  NMSIS | Sifive Freedom Metal <br> (a library) <br> Freedom E SDK | STM32F4 HAL <br> STM32Cube <br> (a SDK?)  | CommonIO <br> (It is something different)  |
@@ -46,8 +45,8 @@ Table showing how existing solutions map against requirements at Project Concept
 | T-3 |  Maybe  |  Y  |  N  |  Y  | Y  |	    |		
 | T-4 | -  |  Y  | -  |  - |  -  |		   |		
 | T-5 |  N  |  Y  |  N  |  N  |  N  |			|	
-| T-6  | Y  |  N  | N   |  -  | -   |	   |		
-| T-7 |  Y  |  N  | N | -  | -  |			|
+| T-6  | Y  |  N  | N   |  Y  | Y   |	   |		
+| T-7 |  Y  |  N  | N | Y  | Y  |			|
 | T-8 | N   | Maybe   |  N |  N  |   N |			|	
 | T-9 |  N  |  Maybe?  |  N  |  N  |  N  |				|
 | IA-1 | N  |  Y  |  Maybe  |  Maybe  | N   |			|	
@@ -58,16 +57,30 @@ Table showing how existing solutions map against requirements at Project Concept
 | IM-1 | N  |  Y  |  N  |  N  |  N  |		   |		
 | IM-2 | N  |  Y  |  N  |  N  |   N |	    |			
 | IM-3 | N  |  Y?  |  N  |  N  |  N  |	     |			
-| IM-4 | N  |  Y?  |  N  |  N  |   N |		    |	
-<br>
+| IM-4 | N  |  Y?  |  N  |  N  |   N |		    |	<br>
 
-**Resources** <br>
-CMSIS: <br> https://developer.arm.com/tools-and-software/embedded/cmsis <br> https://github.com/ARM-software/CMSIS_5 <br> https://www.keil.com/pack/doc/CMSIS/General/html/index.html <br>
-CSI: <br>https://occ.t-head.cn/document?temp=t-head-chip-standard-interface-csi&slug=csi
-NMSIS: <br> https://github.com/Nuclei-Software/NMSIS <br> https://doc.nucleisys.com/nmsis/ <br> 
-Sifive: <br>  https://github.com/sifive/freedom-metal <br> https://sifive.github.io/freedom-metal-docs/ <br> https://sifive.github.io/freedom-e-sdk-docs/index.html <br> https://github.com/sifive/freedom-e-sdk <br>
-STM32Cube: <br> https://github.com/STMicroelectronics/stm32f4xx_hal_driver <br> https://github.com/STMicroelectronics/STM32CubeF4 <br> https://www.st.com/en/ecosystems/stm32cube.html <br> 
-Apache CommonIO: <br> https://commons.apache.org/proper/commons-io/ <br> https://www.tutorialspoint.com/commons_io/commons_io_overview.htm <br>
+
+**Resources** 
+CMSIS: <br> 
+--- https://developer.arm.com/tools-and-software/embedded/cmsis <br>  
+--- https://github.com/ARM-software/CMSIS_5 <br>  
+--- https://www.keil.com/pack/doc/CMSIS/General/html/index.html <br>  
+CSI: <br>  
+--- https://occ.t-head.cn/document?temp=t-head-chip-standard-interface-csi&slug=csi  <br>  
+NMSIS:  <br>  
+--- https://github.com/Nuclei-Software/NMSIS https://doc.nucleisys.com/nmsis/  <br>  
+Sifive: <br>  
+--- https://github.com/sifive/freedom-metal  <br>  
+--- https://sifive.github.io/freedom-metal-docs/   <br>  
+--- https://sifive.github.io/freedom-e-sdk-docs/index.html  <br>  
+--- https://github.com/sifive/freedom-e-sdk  <br>  
+STM32Cube:  <br>  
+--- https://github.com/STMicroelectronics/stm32f4xx_hal_driver <br>  
+--- https://github.com/STMicroelectronics/STM32CubeF4  <br>  
+--- https://www.st.com/en/ecosystems/stm32cube.html  <br>  
+Apache CommonIO: <br>  
+--- https://commons.apache.org/proper/commons-io/  <br>  
+--- https://www.tutorialspoint.com/commons_io/commons_io_overview.htm  <br>  
   
 
 
