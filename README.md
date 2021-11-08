@@ -23,34 +23,34 @@ Make consistent the upper layer software across different SoC. This requires sta
 | Implementation Rqmtns |	IM-1 | A complete open source reference implementation of the HAL for CORE-V MUST be a project deliverable |
 |    | IM-2 |	FreeRTOS SHOULD be supported in the open source reference implementation of HAL for CORE-V |
 |    | IM-3	|Newlib SHOULD be supported in the open source reference implementation of HAL for CORE-V |
-|    | IM-3	| The HAL reference implementation for CORE-V SHOULD be published by the body publishing the Specification (previous page)|  
----
+|    | IM-4	| The HAL reference implementation for CORE-V SHOULD be published by the body publishing the Specification (previous page)|  
 
 ## Table showing how existing solutions map against requirements at Project Concept gate <br>
 ***Y**: Functionality is supported and potentially portable to CORE-V* <br>
 ***N**: Functionality is not supported* <br>
 ***Not Portable (NP)**:Functionality is supported, but would need to be completely reimplemented for CORE-V* <br>
+***--**: No clear indication of this functionality* <br>
 
-|  Items | 	CMSIS |	CSI |  NMSIS | Sifive Freedom Metal <br> (a library) <br> Freedom E SDK | STM32F4 HAL <br> STM32Cube <br> (a SDK?)  |
+|  Items | 	CMSIS for ARM |	CSI |  NMSIS | Sifive Freedom Metal/SDK | STM32F4 HAL <br> STM32Cube for ARM (CMSIS)  |
 | --- | --- | --- | --- | --- | --- |	
-| T-1 |  Y  | Y   |  Y   |   Y |  Y, for ARM  |		   	
+| T-1 |  Y  | Y   |  Y   |   Y |  Y  |		   	
 | T-2 |  Y  |  Y  |  Y  |  Y  |  Y   |	 	
 | T-3 |  Y  |  Y  |  N  |  Y  | Y  |	    	
-| T-4 | -  |  Y  | -  |  - |  -  |		   		
-| T-5 |  N  |  Y  |  N  |  N  |  N  |				
-| T-6  | Y  |  N  | N   |  Y  | Y   |	   		
+| T-4 | --   |  Y  | --  |  Y |  Y  |		   		
+| T-5 |  Y  |  Y  |  NP  |  Y  |  N  |				
+| T-6 | Y   |  N  | N   |  Y  | Y   |	   		
 | T-7 |  Y  |  N  | N | Y  | Y  |			
-| T-8 | N   | Maybe   |  N |  N  |   N |				
-| T-9 |  N  |  Maybe?  |  N  |  N  |  N  |				
-| IA-1 | N  |  Y  |  Maybe  |  Maybe  | N   |				
-| S-1 |  -  |  Y  |  Y  |  N  |  -  |	   			
-| S-2? |  Maybe  |  Maybe  |  Maybe  |  Maybe  |  Maybe  |	    		
-| S-3 |  -  |  Y  |  -  |  -  |   - |		  
-| S-4 |  N  |  Y?  |  N  | -  |  N  |      			
-| IM-1 | N  |  Y  |  N  |  N  |  N  |		   		
-| IM-2 | N  |  Y  |  N  |  N  |   N |	    			
-| IM-3 | N  |  Y?  |  N  |  N  |  N  |	     			
-| IM-4 | N  |  Y?  |  N  |  N  |   N  |   
+| T-8 |  --  | Y   |  N |  N  |   N |				
+| T-9 |  --  | Y  |  N  |  N  |  N  |				
+| IA-1| Y   |  Y  |  Y  |  Y  | NP   |				
+| S-1 |  Y  |  Y  |  Y  |  Y  |  Y  |	   			
+| S-2 |  Y  |  Y  |  Y  |  Y  |  Y  |	    		
+| S-3 |  Y  |  Y  |  Y  |  Y  |   Y |		  
+| S-4 |  --  |  Y  |  --  | --  |  --  |      			
+| IM-1 | N/A  |  Y  |  Y  |  Y  |  NP  |		   		
+| IM-2 | N/A  |  Y  |  N  |  Y  |   Y |	    			
+| IM-3 | N/A  |  --  |  N  |  --  |  --  |	     			
+| IM-4 | N/A  |  Y  |  --  |  --  |   --  |   
 | Core | Support (ARM) |	Support	| Support	|  Support  |  Support (ARM)  |     
 | Driver | Device x13 |	Device  x 23 | 	- |  Support  |  Support   |    
 | RTOS| FreeRTOS |	FreeRTOS, Rhino	| -   |   FreeRTOS  | FreeRTOS     |	    
@@ -80,9 +80,7 @@ STM32Cube:  <br>
 --- https://github.com/STMicroelectronics/stm32f4xx_hal_driver <br>  
 --- https://github.com/STMicroelectronics/STM32CubeF4  <br>  
 --- https://www.st.com/en/ecosystems/stm32cube.html  <br>  
-Apache CommonIO: <br>  
---- https://commons.apache.org/proper/commons-io/  <br>  
---- https://www.tutorialspoint.com/commons_io/commons_io_overview.htm  <br>  
+  
   
 
 
