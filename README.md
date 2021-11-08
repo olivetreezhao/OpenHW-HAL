@@ -1,9 +1,9 @@
 
 
-# Known market/project requirements at PC gate
+## Known market/project requirements at PC gate 
 Significantly reduce cost in SoC driver development, by defining an approach to enable driver reuse according to an accepted framework;<br>
 Make consistent the upper layer software across different SoC. This requires standard HAL APIs to isolate hardware and software resources in such a manner that makes it easy to migrate software across platforms.
-
+## Requirements 
 | Category | Req # | Requirement |
 | --- | --- | --- |
 | Technical Reqmtns	| T-1	| HAL MUST support API for core features |
@@ -26,41 +26,43 @@ Make consistent the upper layer software across different SoC. This requires sta
 |    | IM-3	| The HAL reference implementation for CORE-V SHOULD be published by the body publishing the Specification (previous page)|  
 ---
 
-Table showing how existing solutions map against requirements at Project Concept gate
+## Table showing how existing solutions map against requirements at Project Concept gate <br>
+***Y**: Functionality is supported and potentially portable to CORE-V* <br>
+***N**: Functionality is not supported* <br>
+***Not Portable (NP)**:Functionality is supported, but would need to be completely reimplemented for CORE-V* <br>
 
-|  Items | 	CMSIS |	CSI |  NMSIS | Sifive Freedom Metal <br> (a library) <br> Freedom E SDK | STM32F4 HAL <br> STM32Cube <br> (a SDK?)  | CommonIO <br> (It is something different)  |
-| --- | --- | --- | --- | --- | --- | --- |
-| Core | Support (ARM) |	Support	| Support	|  Support  |  Support (ARM)  |     |
-| Driver | Device x13 |	Device  x 23 | 	- |  Support  |  Support   |    |
-| RTOS| FreeRTOS |	FreeRTOS, Rhino	| -   |   FreeRTOS  | FreeRTOS     |	    |
-| NN	| Support	| Support |	Support  |  N  | Support   |	    |
-| DSP	| Support	| Support	| Support	|   N  |  Support  |      |
-| Coding Rule | MISRA | MISRA, TUeV61508 |	MISRA |  -  | -   |	    |
-| Validation | Support |	Support |	 Support |  -  |  -  |	    |
-| License |	Apache 2.0 |	Apache 2.0 |	Apache 2.0 |  Apache 2.0 and MIT  | Apache License 2.0, MIT <br> BSD-3-Clause, ST SLA0044 <br> Independent JPEG Group License  |	    |
-| Software pack |	Support	| Support |	Support	|  Support  | Support   |    |
-| Numbered Requirements	<br> (Y/N/Maybe/-)|     |    |    |    |    |		   |	
-| T-1 |  Y, for ARM  | Y   |  Y   |   Y |  Y, for ARM  |		   |		
-| T-2 |  Y  |  Y  |  Y  |  Y  |  Y   |	 |		
-| T-3 |  Maybe  |  Y  |  N  |  Y  | Y  |	    |		
-| T-4 | -  |  Y  | -  |  - |  -  |		   |		
-| T-5 |  N  |  Y  |  N  |  N  |  N  |			|	
-| T-6  | Y  |  N  | N   |  Y  | Y   |	   |		
-| T-7 |  Y  |  N  | N | Y  | Y  |			|
-| T-8 | N   | Maybe   |  N |  N  |   N |			|	
-| T-9 |  N  |  Maybe?  |  N  |  N  |  N  |				|
-| IA-1 | N  |  Y  |  Maybe  |  Maybe  | N   |			|	
-| S-1 |  -  |  Y  |  Y  |  N  |  -  |	   |			
-| S-2? |  Maybe  |  Maybe  |  Maybe  |  Maybe  |  Maybe  |	    |		
-| S-3 |  -  |  Y  |  -  |  -  |   - |		   |	
-| S-4 |  N  |  Y?  |  N  | -  |  N  |      |			
-| IM-1 | N  |  Y  |  N  |  N  |  N  |		   |		
-| IM-2 | N  |  Y  |  N  |  N  |   N |	    |			
-| IM-3 | N  |  Y?  |  N  |  N  |  N  |	     |			
-| IM-4 | N  |  Y?  |  N  |  N  |   N |		    |	<br>
+|  Items | 	CMSIS |	CSI |  NMSIS | Sifive Freedom Metal <br> (a library) <br> Freedom E SDK | STM32F4 HAL <br> STM32Cube <br> (a SDK?)  |
+| --- | --- | --- | --- | --- | --- |	
+| T-1 |  Y  | Y   |  Y   |   Y |  Y, for ARM  |		   	
+| T-2 |  Y  |  Y  |  Y  |  Y  |  Y   |	 	
+| T-3 |  Y  |  Y  |  N  |  Y  | Y  |	    	
+| T-4 | -  |  Y  | -  |  - |  -  |		   		
+| T-5 |  N  |  Y  |  N  |  N  |  N  |				
+| T-6  | Y  |  N  | N   |  Y  | Y   |	   		
+| T-7 |  Y  |  N  | N | Y  | Y  |			
+| T-8 | N   | Maybe   |  N |  N  |   N |				
+| T-9 |  N  |  Maybe?  |  N  |  N  |  N  |				
+| IA-1 | N  |  Y  |  Maybe  |  Maybe  | N   |				
+| S-1 |  -  |  Y  |  Y  |  N  |  -  |	   			
+| S-2? |  Maybe  |  Maybe  |  Maybe  |  Maybe  |  Maybe  |	    		
+| S-3 |  -  |  Y  |  -  |  -  |   - |		  
+| S-4 |  N  |  Y?  |  N  | -  |  N  |      			
+| IM-1 | N  |  Y  |  N  |  N  |  N  |		   		
+| IM-2 | N  |  Y  |  N  |  N  |   N |	    			
+| IM-3 | N  |  Y?  |  N  |  N  |  N  |	     			
+| IM-4 | N  |  Y?  |  N  |  N  |   N  |   
+| Core | Support (ARM) |	Support	| Support	|  Support  |  Support (ARM)  |     
+| Driver | Device x13 |	Device  x 23 | 	- |  Support  |  Support   |    
+| RTOS| FreeRTOS |	FreeRTOS, Rhino	| -   |   FreeRTOS  | FreeRTOS     |	    
+| NN	| Support	| Support |	Support  |  N  | Support   |	    
+| DSP	| Support	| Support	| Support	|   N  |  Support  |      
+| Coding Rule | MISRA | MISRA, TUeV61508 |	MISRA |  -  | -   |	    
+| Validation | Support |	Support |	 Support |  -  |  -  |	    
+| License |	Apache 2.0 |	Apache 2.0 |	Apache 2.0 |  Apache 2.0 and MIT  | Apache License 2.0, MIT <br> BSD-3-Clause, ST SLA0044 <br> Independent JPEG Group License  |	    
+| Software pack |	Support	| Support |	Support	|  Support  | Support   |    
 
 
-**Resources** 
+## Resources 
 CMSIS: <br> 
 --- https://developer.arm.com/tools-and-software/embedded/cmsis <br>  
 --- https://github.com/ARM-software/CMSIS_5 <br>  
